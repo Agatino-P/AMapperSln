@@ -35,7 +35,7 @@ namespace AMapperCore.Users.Models
             public Builder WithUser(User user)
             {
                 if (user != null)
-                    return WithGuid(user.Guid).WithFirstName(user.FirstName).WithFirstName(user.LastName);
+                    return WithGuid(user.Guid).WithFirstName(user.FirstName).WithLastName(user.LastName);
                 else
                     return this;
             }
