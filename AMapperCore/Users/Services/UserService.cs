@@ -28,8 +28,7 @@ namespace AMapperCore.Users.Services
 
         public Guid AddUser(UserDTO userDTO)
         {
-            UserDTOValidator userDTOValidator = new UserDTOValidator();
-            if (userDTOValidator.Validate(userDTO).IsValid)
+            if (new UserDTO.Validator().Validate(userDTO).IsValid)
             {
                 return AddUser(userDTO.FirstName, userDTO.LastName);
             }
